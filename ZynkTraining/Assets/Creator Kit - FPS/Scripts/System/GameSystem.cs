@@ -97,6 +97,13 @@ public class GameSystem : MonoBehaviour
         m_TimerRunning = false;
     }
 
+    public void GameOver()
+    {
+        Controller.Instance.DisplayCursor(true);
+        Controller.Instance.CanPause = false;
+        GameOverMenu.Instance.Display();
+    }
+
     public void FinishRun()
     {
         BGMPlayer.clip = EndGameSound;

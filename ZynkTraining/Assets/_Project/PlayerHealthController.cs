@@ -53,7 +53,7 @@ public class PlayerHealthController : MonoBehaviour
         if (Instance.healthCurrent <= 0)
         {
             Destroy(gameObject);
-            GameSystem.Instance.FinishRun();
+            GameSystem.Instance.GameOver();
         }
     }
 
